@@ -4,6 +4,8 @@ pipeline {
             stage ('Test Pipeline'){
                 steps {
                     sh 'echo "This is jenkins pipeline"'
+                    sh 'sudo apt-get update'
+                    sh 'sudo apt-get install -y gnupg software-properties-common'
                 }
             }
         }
